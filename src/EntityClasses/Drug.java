@@ -51,7 +51,7 @@ public class Drug {
     }
 
     // toString method
-
+    @Override
     public String toString() {
         return "Drug Id: " + this.drugId + "," + "Name: " + this.drugName + "," + "Cost: $" + this.drugCost + "," + "Dosage: " + this.dosage;
     }

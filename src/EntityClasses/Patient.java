@@ -56,6 +56,7 @@ public class Patient {
     }
 
     // toString method
+    @Override
     public String toString() {
         return "Patient Id: " + this.patientId + ","  + " First name: " + this.patientFirstName + "," +" Last name: " + this.patientLastName + "," + "Date of birth: " + this.patientDOB;
     }
