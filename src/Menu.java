@@ -1,6 +1,8 @@
+import EntityClasses.Drug;
 import EntityClasses.Patient;
 import FileService.ReadFile;
 import FileService.WriteFile;
+import FileService.WriteToDatabase;
 
 import java.util.Date;
 import java.util.Scanner;
@@ -9,6 +11,7 @@ public interface Menu {
     public static void main(String[] args) {
         WriteFile writeSystem = new WriteFile();
         ReadFile readSystem = new ReadFile();
+        WriteToDatabase writeDatabase = new WriteToDatabase();
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         while(!quit){
@@ -37,6 +40,16 @@ public interface Menu {
                     System.out.println("Enter patient date of birth (yyyy-mm-dd): ");
                     String patientDOB = scanner.nextLine();
                     writeSystem.writeToTextFile(new Patient(patientId,patientFirstName,patientLastName,patientDOB));
+                    break;
+                case 2:
+                    System.out.println("Enter drug name: ");
+                    String drugName = scanner.nextLine();
+                    System.out.println("Enter drug cost: ");
+                    Double drugCost = scanner.nextDouble();
+                    scanner.nextLine();
+                    System.out.println("Enter drug dosage: ");
+                    String drugDosage = scanner.nextLine();
+                    writeDatabase.writeDataToDatabase(new Drug(drugName,drugCost,drugDosage));
                     break;
                 case 3:
                     System.out.println("Enter .txt file name to read: ");
