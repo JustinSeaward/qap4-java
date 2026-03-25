@@ -8,7 +8,7 @@ public class WriteFile {
 
     public void writeToTextFile(Patient patient){
         try{
-            FileWriter fw = new FileWriter("Patients.txt");
+            FileWriter fw = new FileWriter("Patients.txt", true);
             fw.write(patient.toString() + "\n");
             fw.close();
         }

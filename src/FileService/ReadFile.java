@@ -1,20 +1,23 @@
 package FileService;
 
+import EntityClasses.Patient;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class ReadFile {
     public void readFromTextFile(String fileName){
         try{
             FileReader fr = new FileReader(fileName + ".txt");
-            System.out.println(fr.readAllAsString());
+             System.out.println(fr.readAllAsString());
             fr.close();
         }
         catch(IOException e) {
             System.out.println("File with that name not found");
         }
     }
-
 }
