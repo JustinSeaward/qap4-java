@@ -1,1 +1,4 @@
-Patient Id: 101, First name: Rusty, Last name: Shackleford, Date of birth: 1988-01-01
+101,Rusty,Shackleford,1988-01-01
+102,Bat,Man,1972-01-01
+103,Spider,Man,1982-01-01
+104,Iron,Man,1984-01-01
