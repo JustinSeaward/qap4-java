@@ -1,17 +1,20 @@
 import EntityClasses.Drug;
 import EntityClasses.Patient;
+import FileService.ReadDatabase;
 import FileService.ReadFile;
 import FileService.WriteFile;
 import FileService.WriteToDatabase;
 
-import java.util.Date;
 import java.util.Scanner;
 
 public interface Menu {
-    public static void main(String[] args) {
+    static void main(String[] args) {
+
         WriteFile writeSystem = new WriteFile();
         ReadFile readSystem = new ReadFile();
         WriteToDatabase writeDatabase = new WriteToDatabase();
+        ReadDatabase readDatabase = new ReadDatabase();
+
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         while(!quit){
@@ -55,6 +58,10 @@ public interface Menu {
                     System.out.println("Enter .txt file name to read: ");
                     String fileName = scanner.nextLine();
                     readSystem.readFromTextFile(fileName);
+                    break;
+                case 4:
+                    System.out.println("Data from database: ");
+                    readDatabase.readFromDatabase();
                     break;
                 case -1:
                     quit = true;

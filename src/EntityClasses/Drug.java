@@ -1,6 +1,8 @@
 package EntityClasses;
 
-public class Drug {
+import java.io.Serializable;
+
+public class Drug implements Serializable{
     // Instance variables
     private int drugId;
     private String drugName;
