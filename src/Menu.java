@@ -38,6 +38,11 @@ public class Menu {
                     String patientDOB = scanner.nextLine();
                     writeSystem.writeToTextFile(new Patient(patientId,patientFirstName,patientLastName,patientDOB));
                     break;
+                case 2:
+                    System.out.println("Enter .txt file name to read: ");
+                    String fileName = scanner.nextLine();
+                    readSystem.readFromTextFile(fileName);
+                    break;
                 case -1:
                     quit = true;
                     System.out.println("System shutting down");
