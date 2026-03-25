@@ -10,6 +10,12 @@ public class Drug {
     // Constructors
     public Drug(){};
 
+    public Drug( String drugName, double drugCost, String dosage){
+        this.drugName = drugName;
+        this.drugCost = drugCost;
+        this.dosage = dosage;
+    }
+
     public Drug(int drugId, String drugName, double drugCost, String dosage){
         this.drugId = drugId;
         this.drugName = drugName;
