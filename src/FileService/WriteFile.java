@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class WriteFile {
 
-    public void writeToTextFile(String fileName, Patient patient){
+    public void writeToTextFile(Patient patient){
         try{
-            FileWriter fw = new FileWriter(fileName);
+            FileWriter fw = new FileWriter("Patients.txt");
             fw.write(patient.toString());
             fw.close();
         }
