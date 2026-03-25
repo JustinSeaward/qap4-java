@@ -1,8 +1,5 @@
 package EntityClasses;
 
-import java.time.LocalDate;
-import java.sql.Date;
-
 public class Patient {
     // Instance variables
     private int patientId;
@@ -58,6 +55,6 @@ public class Patient {
     // toString method
     @Override
     public String toString() {
-        return "Patient Id: " + this.patientId + ", "  + "First name: " + this.patientFirstName + ", " + "Last name: " + this.patientLastName + ", " + " Date of birth: " + this.patientDOB;
+        return this.patientId + "," + this.patientFirstName + "," + this.patientLastName + "," + this.patientDOB;
     }
 }
