@@ -43,7 +43,6 @@ public interface Menu {
                     String fileName = scanner.nextLine();
                     readSystem.readFromTextFile(fileName);
                     break;
-
                 case -1:
                     quit = true;
                     System.out.println("System shutting down");
