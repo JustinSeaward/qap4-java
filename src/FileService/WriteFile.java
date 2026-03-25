@@ -9,7 +9,7 @@ public class WriteFile {
     public void writeToTextFile(Patient patient){
         try{
             FileWriter fw = new FileWriter("Patients.txt");
-            fw.write(patient.toString());
+            fw.write(patient.toString() + "\n");
             fw.close();
         }
         catch(IOException e){
