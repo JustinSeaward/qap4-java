@@ -8,12 +8,12 @@ public class Patient {
     private int patientId;
     private String patientFirstName;
     private String patientLastName;
-    private Date patientDOB;
+    private String patientDOB;
 
     // Constructors
     public Patient(){}
 
-    public Patient(int patientId, String patientFirstName, String patientLastName, Date patientDOB){
+    public Patient(int patientId, String patientFirstName, String patientLastName, String patientDOB){
         this.patientId = patientId;
         this.patientFirstName = patientFirstName;
         this.patientLastName = patientLastName;
@@ -47,11 +47,11 @@ public class Patient {
         this.patientLastName = patientLastName;
     }
 
-    public Date getPatientDOB() {
+    public String getPatientDOB() {
         return patientDOB;
     }
 
-    public void setPatientDOB(Date patientDOB) {
+    public void setPatientDOB(String patientDOB) {
         this.patientDOB = patientDOB;
     }
 
