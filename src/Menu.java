@@ -73,9 +73,5 @@ public interface Menu {
                 System.out.println("Invalid option");
             }
         }
-
-
-
-
     }
 }

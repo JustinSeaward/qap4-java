@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class ReadDatabase {
 
-    public static void readFromDatabase(){
-        ArrayList<Drug> drugList = new ArrayList<Drug>();
+    public void readFromDatabase(){
+        ArrayList<Drug> drugList = new ArrayList<>();
         try {
             String query = "SELECT * FROM Drugs";
             Connection con = Databaseconnection.getcon();
@@ -33,8 +33,11 @@ public class ReadDatabase {
             e.printStackTrace();
         }
         System.out.println();
-        System.out.println("Drug(s) from database");
+        System.out.println("***** Drug(s) from database *****");
         System.out.println();
-        System.out.println(drugList);
+        for(Drug drug : drugList){
+            System.out.println(drug);
+        }
+        System.out.println();
     }
 }
