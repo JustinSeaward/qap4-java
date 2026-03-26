@@ -10,11 +10,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ReadDatabase {
-
+    // Method to read data from a database
     public void readFromDatabase(){
+        // Declared new ArrayList to add a new Drug object to be read
         ArrayList<Drug> drugList = new ArrayList<>();
+        String query = "SELECT * FROM Drugs";
         try {
-            String query = "SELECT * FROM Drugs";
+            // Establish a connection to the database
             Connection con = Databaseconnection.getcon();
             PreparedStatement statement = con.prepareStatement(query);
             ResultSet rs = statement.executeQuery();

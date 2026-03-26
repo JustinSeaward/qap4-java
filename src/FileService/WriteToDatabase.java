@@ -2,15 +2,17 @@ package FileService;
 
 import EntityClasses.Drug;
 import DBConnection.Databaseconnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class WriteToDatabase {
-
+    // Method to write data to a database
     public void writeDataToDatabase(Drug drug){
         String query = "INSERT INTO Drugs (name, cost, dosage)" + "VALUES (?,?,?)";
         try {
+            // Establish connection to the database
             Connection con = Databaseconnection.getcon();
             PreparedStatement statement = con.prepareStatement(query);
             statement.setString(1, drug.getDrugName());
