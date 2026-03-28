@@ -25,8 +25,8 @@ public interface Menu {
             System.out.println();
             System.out.println("Enter a number for the corresponding option.");
             System.out.println();
-            System.out.println("    1. Write/save to text file.");
-            System.out.println("    2. Write/save to the database.");
+            System.out.println("    1. Write to Patients text file.");
+            System.out.println("    2. Write Medication information to database.");
             System.out.println("    3. Read data from text file.");
             System.out.println("    4. Read date from database.");
             System.out.println("    Enter -1 to exit program.");
