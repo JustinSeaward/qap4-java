@@ -1,5 +1,6 @@
 import EntityClasses.Drug;
 import EntityClasses.Patient;
+
 import FileService.ReadDatabase;
 import FileService.ReadFile;
 import FileService.WriteFile;
@@ -19,15 +20,16 @@ public interface Menu {
         boolean quit = false;
         while(!quit){
             // Menu for the file/database read and write system.
+            System.out.println();
             System.out.println("****** Read and Write Program ******");
             System.out.println();
-            System.out.println("Enter a number for the corresponding option");
+            System.out.println("Enter a number for the corresponding option.");
             System.out.println();
-            System.out.println("    1. Write/save to text file");
-            System.out.println("    2. Write/save to the database");
-            System.out.println("    3. Read data from text file");
-            System.out.println("    4. Read date from database");
-            System.out.println("    Enter -1 to exit program");
+            System.out.println("    1. Write/save to text file.");
+            System.out.println("    2. Write/save to the database.");
+            System.out.println("    3. Read data from text file.");
+            System.out.println("    4. Read date from database.");
+            System.out.println("    Enter -1 to exit program.");
             System.out.println();
             int option = scanner.nextInt();
             scanner.nextLine();
@@ -43,6 +45,7 @@ public interface Menu {
                     System.out.println("Enter patient date of birth (yyyy-mm-dd): ");
                     String patientDOB = scanner.nextLine();
                     writeSystem.writeToTextFile(new Patient(patientId,patientFirstName,patientLastName,patientDOB));
+                    System.out.println("Data saved to .txt file.");
                     break;
                 case 2:
                     System.out.println("Enter drug name: ");
@@ -53,6 +56,7 @@ public interface Menu {
                     System.out.println("Enter drug dosage: ");
                     String drugDosage = scanner.nextLine();
                     writeDatabase.writeDataToDatabase(new Drug(drugName,drugCost,drugDosage));
+                    System.out.println("Data saved to database.");
                     break;
                 case 3:
                     System.out.println("Enter .txt file name to read: ");
@@ -60,17 +64,18 @@ public interface Menu {
                     readSystem.readFromTextFile(fileName);
                     break;
                 case 4:
-                    System.out.println("Data from database: ");
+                    System.out.println("Press enter to print data.");
+                    scanner.nextLine();
                     readDatabase.readFromDatabase();
                     break;
                 case -1:
                     quit = true;
-                    System.out.println("System shutting down");
-                    System.out.println("GoodBye");
+                    System.out.println("System shutting down.");
+                    System.out.println("GoodBye.");
                     break;
 
                 default:
-                System.out.println("Invalid option");
+                System.out.println("Invalid option.");
             }
         }
     }
