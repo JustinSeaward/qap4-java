@@ -1,2 +1,1 @@
 101,Rusty,Shackleford,1988-01-01
-102,Spider,Man,1971-01-01
